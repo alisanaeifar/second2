@@ -1,0 +1,22 @@
+<?php
+    if ($this->configfile->isEnabled()){
+?>
+    <h1>Hey I'm here!!!</h1>
+    <form action="<?php echo $this->getUrl("comment/index/save") ?>" method="post">
+        <label><b><< You can share your IDEA with us >></b><br>
+            <br><br>
+            your email address :
+            <input type="email" name="email">
+            <br><br>
+            your comment :
+            <textarea type="text" name="name"></textarea>
+            <br><br>
+            <input class="action primary" type="submit" name="sub" value="Post Signup" style="border-radius: 0px;padding: 5px;">
+    </form>
+<?php
+        }
+        else
+        {
+            echo 'this page was deleted by admin!';
+        }
+?>
